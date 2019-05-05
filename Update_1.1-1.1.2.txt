@@ -1,0 +1,28 @@
+##################
+Update from 1.1.1 to 1.1.2
+
+Fix script crash, when a ' is in the album name.
+
+1.  Overwrite the file youtube_auto-import/classes/GoesiYouImport.php with the new one
+2.  Overwrite the file youtube_auto-import/install/config.php
+
+
+##################
+Update from 1.1 to 1.1.1 =
+The field type is missing in the install.sql
+
+1. Overwrite the old install.sql with the new one. 
+
+##################
+Update from 1.0 to 1.1 =
+
+1. Step: 
+Open your mysql and execute this: 
+ALTER TABLE `goesi_youtube` ADD `type` ENUM( 'channel', 'playlist', 'tags', 'search' ) NOT NULL DEFAULT 'channel' AFTER `active`;
+
+2.Step: 
+Overwrite all files with the new files.
+
+
+OR deinstall the module and reinstall it with the new files.
+##################
